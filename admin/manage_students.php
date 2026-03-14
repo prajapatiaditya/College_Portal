@@ -20,8 +20,8 @@ mysqli_query($conn,$sql);
 <head>
 
 <title>Manage Students</title>
-<link rel="stylesheet" href="manage_students1.css">
-<a href="dashboard.php"><button id="logout-btn">🔙</button></a>
+<link rel="stylesheet" href="manage_students.css">
+<a href="dashboard.php"><button id="logout-btn"> ⪡ </button></a>
 
 </head>
 
@@ -74,7 +74,7 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php echo $row['username']; ?></td>
 
 <td>
-<a class="delete-btn" href="delete_student.php?id=<?php echo $row['id']; ?>">Delete</a>
+<a class="delete-btn" href="delete_student.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
 </td>
 
 </tr>
@@ -92,4 +92,5 @@ while($row=mysqli_fetch_assoc($result))
 </div>
 </body>
 </html>
+
 

@@ -1,0 +1,82 @@
+
+body{
+font-family: Arial, sans-serif;
+background: url(do.png); 
+
+}
+
+
+
+.container{
+width:800px;
+margin:40px auto;
+background-color: rgb(246, 249, 255);
+color: #0f0044;
+padding:15px;
+border-radius:20px;
+border: rgba(115, 115, 255, 0.329) solid 0.5px;
+box-shadow:  20px 20px 0px -1px rgb(4, 0, 255);
+}
+
+#logout-btn{
+background:#0004ff;
+border:none;
+color:white;
+padding:6px 14px;
+border-radius:6px;
+cursor:pointer;
+margin-top: 20px;
+margin-left: 20px;
+}
+
+h2{
+margin-top:0;
+color:#2f00ff;
+}
+
+form input{
+width:50%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:25px;
+}
+
+button{
+background:#007bff;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:4px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th,table td{
+padding:10px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+.delete-btn{
+color:white;
+background:red;
+padding:6px 10px;
+text-decoration:none;
+border-radius:4px;
+}
+
+.delete-btn:hover{
+background:darkred;
+}
+
