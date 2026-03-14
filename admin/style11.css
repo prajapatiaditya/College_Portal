@@ -1,0 +1,244 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* --- GLOBAL STYLES --- */
+body {
+    /* Adding a colorful background behind the app to make the dark UI pop */
+    background-image:url(do.png);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* --- HEADER BAR --- */
+#header_bar {
+    background: rgba(4, 0, 255, 0.664);
+       width: 100%;
+    max-width: 1040px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0% 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.8s ease;
+}
+
+#logout-btn {
+    padding: 8px 18px;
+    border: none;
+    background: #000291;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#logout-btn:hover {
+    background: #3a2eda;
+    transform: scale(1.15);
+}
+
+/* --- MAIN APP CONTAINER --- */
+#main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: 80vh;
+    background-color: #31232400; /* Deep brown from the right panel */
+    border-radius: 10px;
+    border: #0400414b solid 0.5px;
+    overflow: hidden;
+    box-shadow:  20px 20px 0px -1px rgb(4, 0, 255);
+}
+
+/* --- LEFT PANEL (Contacts) --- */
+#left-panel {
+    width: 320px;
+    background-color: rgb(77, 80, 255); /* Darker brown for sidebar */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.486);
+}
+
+#left-panel h3 {
+    padding: 24px 20px;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+}
+
+.contact {
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: #e5e5e5;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    transition: background 0.2s ease;
+}
+
+.contact:hover {
+    background-color: #2400c4; /* Highlight color when hovering */
+    transform: scale(1.02);
+}
+
+/* --- RIGHT PANEL (Chat Area) --- */
+#right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(246, 249, 255);
+}
+
+#chat-header {
+    padding: 25px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2315c2;
+    border-bottom: 1px solid rgba(32, 32, 32, 0.137);
+}
+
+/* --- CHAT BOX & MESSAGES --- */
+.chat-box {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base style for all message bubbles */
+.admin-msg, .student-msg {
+    max-width: 65%;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Admin Messages (Sent messages - Right side, Dark Brown) */
+.admin-msg {
+    align-self: flex-end;
+    background-color: #1625ff; 
+    color: #ffffff;
+    border-radius: 20px 20px 0px 20px; /* Flat bottom-right corner */
+}
+
+/* Student Messages (Received messages - Left side, Purple) */
+.student-msg {
+    align-self: flex-start;
+    background-color: #9d92fffd;
+    color: #ffffff;
+    border-radius: 20px 20px 20px 0px; /* Flat bottom-left corner */
+}
+
+/* Timestamps inside bubbles */
+.admin-msg small,
+.student-msg small{
+font-size:9px;
+opacity:0.7;
+margin-top:6px;
+display:block;
+}
+
+.admin-msg small{
+text-align:right;
+}
+
+.admin-msg small {
+    text-align: right;
+}
+
+/* --- INPUT FORM --- */
+#sendForm {
+    margin: 0 30px 30px 30px; /* Spacing from the edges */
+    border: #35262854 solid 0.5px;
+    background-color: #ffffff; /* Pill background */
+    border-radius: 30px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#textArea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 5px 0;
+}
+
+#textArea::placeholder {
+    color: #888;
+}
+
+/* Quick CSS trick to style your file input without changing your HTML */
+#file-upload {
+    width: 90px;
+    color: transparent;
+}
+#file-upload::-webkit-file-upload-button {
+    visibility: hidden;
+}
+#file-upload::before {
+    content: 'File';
+    display: inline-block;
+    background: rgba(1, 5, 255, 0.726);
+    color: #ffffff;
+    margin-left: 40px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+#file-upload:hover::before {
+    background: rgb(0, 4, 255);
+}
+
+#sendBtn {
+    background: transparent;
+    color: #8468f5; /* Matching purple send button */
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: transform 0.2s;
+}
+
+#sendBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Custom Scrollbar for a polished look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

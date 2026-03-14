@@ -1,0 +1,9 @@
+clothing-mall/
+├── public/
+│   └── style.css
+├── views/
+│   ├── index.ejs       (Home Page)
+│   ├── shop.ejs        (Shop Page)
+│   └── product.ejs     (Product Detail Page)
+├── data.js             (Mock Database)
+└── server.js           (Backend Logic)

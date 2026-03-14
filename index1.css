@@ -1,0 +1,77 @@
+
+/*         GLOBAL RESET          */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/*            BODY               */
+#login_pagebody {
+    height: 100vh;
+    background:url(do.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*         LOGIN BOX             */
+
+.login-container {
+    background-color: rgb(246, 249, 255);
+    backdrop-filter: blur(15px);
+    padding: 45px 40px;
+    border-radius: 15px;
+    border: rgba(115, 115, 255, 0.329) solid 0.5px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow:  20px 20px 0px -1px rgb(4, 0, 255);
+    animation: fadeIn 0.8s ease;
+}
+
+.login-container h2 {
+    color: black;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+/*         INPUT FIELD           */
+
+
+.login-container input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 18px;
+    border-radius: 25px;
+    border: 1px solid #0000003d;
+    outline: none;
+    font-size: 14px;
+
+}
+
+/*         LOGIN BUTTON          */
+
+
+#login-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background: #424ef8;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#login-btn:hover {
+    background: #1100ff;
+    transform: scale(1.05);
+}
+
+
+/*         ANIMATION             */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
