@@ -15,7 +15,7 @@ $student_id = $_GET['student_id'] ?? null;
 $students = mysqli_query($conn, "SELECT id, name FROM users WHERE role='student'");
 
 if ($student_id) {
-    $chat = mysqli_query($conn, "
+    $chat = mysqli_query($conn,"
         SELECT * FROM messages
         WHERE (sender_id=$admin_id AND receiver_id=$student_id)
            OR (sender_id=$student_id AND receiver_id=$admin_id)
