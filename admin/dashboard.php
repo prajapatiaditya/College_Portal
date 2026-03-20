@@ -100,7 +100,7 @@ if ($student_id) {
 const form = document.getElementById("sendForm");
 const chatBox = document.getElementById("chat-box");
 
-/* ===== AUTO SCROLL FUNCTION ===== */
+/* ===== AUTO SCROLL FUNCTION ===== 
 
 function scrollToBottom(){
 
@@ -112,7 +112,7 @@ chatBox.scrollTop = chatBox.scrollHeight;
 
 }
 
-window.onload = scrollToBottom;
+window.onload = scrollToBottom;*/
 /* ===== PAGE LOAD SCROLL ===== */
 
 window.onload = function(){

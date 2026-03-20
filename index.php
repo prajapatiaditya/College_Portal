@@ -21,8 +21,11 @@ if(isset($_POST['login'])){
         // Redirect based on role
         if($user['role'] == 'admin'){
             header("Location: admin/dashboard.php");
-        } else {
+        } else if ($user['role'] == 'student'){
             header("Location: student/dashboard.php");
+        }
+        elseif($user['role'] == 'hod'){
+            header("Location: hod/manage_admin.php"); // your current page
         }
         exit();
     } else {
